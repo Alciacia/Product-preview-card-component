@@ -24,7 +24,7 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   width: 650px;
-  height: 500px;
+  height: 450px;
   overflow: hidden;
 
 }
@@ -35,7 +35,6 @@ body>.center {
 }
 
 .product-image {
-  grid-column: 1 / span 1;
   max-width: 100%;
   overflow: hidden;
 
@@ -48,7 +47,6 @@ body>.center {
 }
 
 .product-details {
-  grid-column: 2 / span 1;
   padding: 35px;
 }
 
@@ -68,6 +66,7 @@ body>.center {
   font-weight: 700;
   font-size: 30px;
   line-height: 1;
+  padding-right: 30px;
 
 }
 
@@ -94,7 +93,6 @@ body>.center {
   text-decoration: line-through;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-
 }
 
 .prices {
@@ -104,6 +102,46 @@ body>.center {
   gap: 20px;
 }
 
-.button-container {
-  height: 100%;
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding: 16px 15px;
+  border-radius: 6px;
+  border: 0;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: hsla(158, 36%, 37%, 0.9);
+}
+
+@media (max-width: 800px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .grid-center {
+    padding: 0 10px;
+    width: 95%;
+    margin: auto;
+  }
+
+  .card {
+    max-width: 380px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 60%;
+    height: 85vh;
+  }
+
+  .product-details {
+    padding: 25px;
+  }
 }
